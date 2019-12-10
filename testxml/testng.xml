@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="接口测试" verbose="1" parallel="methods"
+	thread-count="1" configfailurepolicy="continue" time-out="10000000"
+	skipfailedinvocationcounts="false" allow-return-values="true">
+	
+	<parameter name="environment" value="fat" />
+	
+	<test name="测试" preserve-order="true"
+		skipfailedinvocationcounts="true">
+		<classes>
+			<class name="com.welab.check.TestCheckScore">
+				<methods>
+					<include name="testCheckBankCard" description="银行卡评估"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
