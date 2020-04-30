@@ -10,21 +10,7 @@ public class TestDataProvider {
 
 	@DataProvider(name = "getDataForExcel")
 	public static Object[][] getDataForExcel(Method m) throws Exception {
-		Object[][] testObjArray = ExcelUtils.getTableArray("casefiles//testWe-check.xlsx",
-				m.getDeclaringClass().getSimpleName(), m.getName());
-		return (testObjArray);
-	}
-	
-	@DataProvider(name = "getFrontDataForExcel")
-	public static Object[][] getFrontDataForExcel(Method m) throws Exception {
-		Object[][] testObjArray = ExcelUtils.getTableArray("casefiles//testWe-check-front.xlsx",
-				m.getDeclaringClass().getSimpleName(), m.getName());
-		return (testObjArray);
-	}
-	
-	@DataProvider(name = "getToolsDataForExcel")
-	public static Object[][] getToolsDataForExcel(Method m) throws Exception {
-		Object[][] testObjArray = ExcelUtils.getTableArray("casefiles//testToolsData.xlsx",
+		Object[][] testObjArray = ExcelUtils.getTableArray("casefiles//testDemo.xlsx",
 				m.getDeclaringClass().getSimpleName(), m.getName());
 		return (testObjArray);
 	}

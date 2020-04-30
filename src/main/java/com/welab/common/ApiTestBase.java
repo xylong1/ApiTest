@@ -53,19 +53,19 @@ public class ApiTestBase {
 	public void init(String environment) {
 		domain = GetConfigUtil.getConfigPropertyByNameAndKey(environment, "domain");
 		
-		String loginResponse = LoginUtil.login(domain, environment);
-		saveResult(loginResponse,"merchantId = $.data.merchantId;token = $.data.token;");
+		//String loginResponse = LoginUtil.login(domain, environment);
+		//saveResult(loginResponse,"merchantId = $.data.merchantId;token = $.data.token;");
 		
 		headers.clear();
         headers.put("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
         //headers.put("Accept", "application/x-www-form-urlencoded");
-        headers.put("x-user-token", saveDatas.get("token"));
-        headers.put("x-merchant-id", saveDatas.get("merchantId"));
-        headers.put("x-user-mobile", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "username"));
+        //headers.put("x-user-token", saveDatas.get("token"));
+        //headers.put("x-merchant-id", saveDatas.get("merchantId"));
+        //headers.put("x-user-mobile", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "username"));
         
-        saveDatas.put("secretKey", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "secretKey"));
-        saveDatas.put("accessKey", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "accessKey"));
-        saveDatas.put("timestamp", ""+System.currentTimeMillis()/1000);
+        //saveDatas.put("secretKey", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "secretKey"));
+        //saveDatas.put("accessKey", GetConfigUtil.getConfigPropertyByNameAndKey(environment, "accessKey"));
+        //saveDatas.put("timestamp", ""+System.currentTimeMillis()/1000);
 	}
 	
 	//执行每一条用例

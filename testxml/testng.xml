@@ -9,9 +9,9 @@
 	<test name="测试" preserve-order="true"
 		skipfailedinvocationcounts="true">
 		<classes>
-			<class name="com.welab.check.TestCheckScore">
+			<class name="com.test.demo.TestDemo">
 				<methods>
-					<include name="testCheckBankCard" description="银行卡评估"></include>
+					<include name="testDemo" description="测试demo"></include>
 				</methods>
 			</class>
 		</classes>
