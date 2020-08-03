@@ -1,7 +1,6 @@
-package com.welab.functions;
+package com.len.functions;
 
-import com.welab.utils.RandomUtil;
-
+import com.len.utils.RandomUtil;
 
 public class RandomFunction implements Function {
 

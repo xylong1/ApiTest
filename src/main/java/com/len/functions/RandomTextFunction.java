@@ -1,10 +1,9 @@
-package com.welab.functions;
+package com.len.functions;
 
-import com.welab.utils.RandomUtil;
-import com.welab.utils.StringUtil;
+import com.len.utils.RandomUtil;
+import com.len.utils.StringUtil;
 
-
-public class RandomTextFunction implements Function{
+public class RandomTextFunction implements Function {
 
 	@Override
 	public String execute(String[] args) {

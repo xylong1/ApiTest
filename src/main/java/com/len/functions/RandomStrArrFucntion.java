@@ -1,9 +1,8 @@
-package com.welab.functions;
+package com.len.functions;
 
-import com.welab.utils.RandomUtil;
+import com.len.utils.RandomUtil;
 
-
-public class RandomStrArrFucntion implements Function{
+public class RandomStrArrFucntion implements Function {
 
 	@Override
 	public String execute(String[] args) {

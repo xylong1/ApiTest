@@ -1,16 +1,16 @@
-package com.welab.utils;
+package com.len.utils;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.welab.functions.Function;
+import com.len.functions.Function;
 
-public class FunctionUtil{
+public class FunctionUtil {
 
 	private static final Map<String, Class<? extends Function>> functionsMap = new HashMap<>();
 	static {
-		//bodyfile 特殊处理
+		// bodyfile 特殊处理
 		functionsMap.put("bodyfile", null);
 		List<Class<?>> clazzes = ClassFinder.getAllAssignedClass(Function.class);
 		clazzes.forEach((clazz) -> {
@@ -23,16 +23,16 @@ public class FunctionUtil{
 				}
 			} catch (Exception ex) {
 				ex.printStackTrace();
-				//TODO 
+				// TODO
 			}
 		});
 	}
-	
-	public static boolean isFunction(String functionName){
+
+	public static boolean isFunction(String functionName) {
 		return functionsMap.containsKey(functionName);
 	}
-	
-	public static String getValue(String functionName,String[] args){
+
+	public static String getValue(String functionName, String[] args) {
 		try {
 			String value = functionsMap.get(functionName).newInstance().execute(args);
 			return value.replace("\\,", ",");

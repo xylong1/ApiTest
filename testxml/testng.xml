@@ -9,7 +9,7 @@
 	<test name="测试" preserve-order="true"
 		skipfailedinvocationcounts="true">
 		<classes>
-			<class name="com.test.demo.TestDemo">
+			<class name="com.testdemo.DemoTest">
 				<methods>
 					<include name="testDemo" description="测试demo"></include>
 				</methods>

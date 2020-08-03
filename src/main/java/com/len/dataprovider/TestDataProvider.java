@@ -1,10 +1,10 @@
-package com.welab.dataprovider;
+package com.len.dataprovider;
 
 import java.lang.reflect.Method;
 
 import org.testng.annotations.DataProvider;
 
-import com.welab.utils.ExcelUtils;
+import com.len.utils.ExcelUtils;
 
 public class TestDataProvider {
 
